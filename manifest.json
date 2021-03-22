@@ -1,16 +1,20 @@
 {
-    "name": "Hide noname comment",
+    "name": "ドメサカブログ 名無しコメント非表示",
     "version": "1.0.0",
     "manifest_version": 2,
-    "description": "Hide domesoccer blog noname comment Extension",
+    "description": "ドメサカブログの名無しコメントを非表示にする拡張機能です",
+    "permissions": ["storage"],
     "content_scripts": [
         {
             "matches": [
                 "https://blog.domesoccer.jp/archives/*"
             ],
             "js": [
-                "hide.js"
+                "content.js"
             ]
         }
-    ]
+    ],
+    "browser_action": {
+        "default_popup": "popup.html"
+    }
 }
